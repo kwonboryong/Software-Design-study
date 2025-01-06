@@ -1,9 +1,9 @@
 # CH2. 시스템 프로그래밍(파일 시스템 모듈)
 
-- [파일 시스템 모듈(fs 모듈,FileSystem)](#)
-- [fs 모듈](#)
-- [glob 모듈](#)
-- [fs-extra 모듈](#)
+- [파일 시스템 모듈(fs 모듈,FileSystem)](#파일-시스템-모듈fs-모듈filesystem)
+- [fs 모듈](#fs-모듈)
+- [glob 모듈](#glob-모듈)
+- [fs-extra 모듈](#fs-extra-모듈)
 
 <br/><br/>
 
@@ -61,7 +61,7 @@ fs.mkdir('newDir', { recursive: true }, (err) => {
 fs.readFile('example.txt', 'utf8', (err, data) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.readFileSync`** <br/>
 : 파일의 내용을 동기적으로 읽음
@@ -70,7 +70,7 @@ fs.readFile('example.txt', 'utf8', (err, data) => { ... });
 const data = fs.readFileSync('example.txt', 'utf8');
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.writeFile`** <br/>
 : 파일에 데이터를 비동기적으로 씀
@@ -83,7 +83,7 @@ const data = fs.readFileSync('example.txt', 'utf8');
 fs.writeFile('example.txt', 'Hello, Node.js!', (err) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.writeFileSync`** <br/>
 : 파일에 데이터를 동기적으로 씀
@@ -92,7 +92,7 @@ fs.writeFile('example.txt', 'Hello, Node.js!', (err) => { ... });
 fs.writeFileSync('example.txt', 'Hello, Node.js!');
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.unlink`** <br/>
 : 파일을 비동기적으로 삭제
@@ -103,7 +103,7 @@ fs.writeFileSync('example.txt', 'Hello, Node.js!');
 fs.unlink('example.txt', (err) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.unlinkSync`** <br/>
 : 파일을 동기적으로 삭제
@@ -112,7 +112,7 @@ fs.unlink('example.txt', (err) => { ... });
 fs.unlinkSync('example.txt');
 ```
 
-<br/><br/>
+<br/><br/><br/>
 
 ### **2. 디렉터리 작업** 
 **`fs.readdir`** <br/>
@@ -125,7 +125,7 @@ fs.unlinkSync('example.txt');
 fs.readdir('./', (err, files) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.readdirSync`** <br/>
 : 디렉터리 내용을 동기적으로 읽음
@@ -134,7 +134,7 @@ fs.readdir('./', (err, files) => { ... });
 const files = fs.readdirSync('./');
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.mkdir`** <br/>
 : 디렉터리를 비동기적으로 생성
@@ -147,7 +147,7 @@ const files = fs.readdirSync('./');
 fs.mkdir('new_directory', { recursive: true }, (err) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.mkdirSync`** <br/>
 : 디렉터리를 동기적으로 생성
@@ -156,7 +156,7 @@ fs.mkdir('new_directory', { recursive: true }, (err) => { ... });
 fs.mkdirSync('new_directory', { recursive: true });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.rmdir`** *(Node.js 14 이하에서 사용, 최신 버전에서는 `fs.rm` 권장)* <br/>
 : 디렉터리를 비동기적으로 삭제
@@ -169,7 +169,7 @@ fs.mkdirSync('new_directory', { recursive: true });
 fs.rmdir('new_directory', { recursive: true }, (err) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.rmdirSync`** <br/>
 : 디렉터리를 동기적으로 삭제
@@ -178,7 +178,7 @@ fs.rmdir('new_directory', { recursive: true }, (err) => { ... });
 fs.rmdirSync('new_directory', { recursive: true });
 ```
 
-<br/><br/>
+<br/><br/><br/>
 
 ### **3. 파일 정보**
 **`fs.stat`** <br/>
@@ -190,7 +190,7 @@ fs.rmdirSync('new_directory', { recursive: true });
 fs.stat('example.txt', (err, stats) => { ... });
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.statSync`** <br/>
 : 파일이나 디렉터리의 정보를 동기적으로 가져옴
@@ -199,7 +199,7 @@ fs.stat('example.txt', (err, stats) => { ... });
 const stats = fs.statSync('example.txt');
 ```
 
-<br/><br/>
+<br/><br/><br/>
 
 ### **4. JSON 파일 작업**
 **JSON 읽기** <br/>
@@ -210,7 +210,7 @@ fs.readFile('data.json', 'utf8', (err, data) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **JSON 쓰기** <br/>
 : 객체를 JSON 형식으로 파일에 저장
@@ -295,7 +295,7 @@ glob('**/*.js', { ignore: ['**/node_modules/**', '**/*.test.js'] }, (err, files)
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`cwd`** <br/>
 : 검색 기준 디렉터리 지정
@@ -309,7 +309,7 @@ glob('*.txt', { cwd: './logs' }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`dot`** <br/>
 : 숨김 파일 포함
@@ -320,7 +320,7 @@ glob('**/*', { dot: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`nodir`** <br/> : 디렉터리 제외
 ```jsx
@@ -330,7 +330,7 @@ glob('**/*', { nodir: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`absolute`** <br/> : 절대 경로 반환
 ```jsx
@@ -340,7 +340,7 @@ glob('**/*.js', { absolute: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`follow`** <br/> : 심볼릭 링크 따라가기
 - 심볼릭 링크(symbolic link)
@@ -354,7 +354,7 @@ glob('**/*', { follow: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`matchBase`** <br/>
 : 경로 무시하고 파일 이름만 매칭
@@ -365,7 +365,7 @@ glob('*.txt', { matchBase: true }, (err, files) => {
 });
 ``` 
 
-<br/>
+<br/><br/>
 
 **`nocase`** <br/>
 : 대소문자 무시
@@ -377,7 +377,7 @@ glob('**/*.TXT', { nocase: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`stat`** <br/>
 : 파일 통계 정보 포함
@@ -388,7 +388,7 @@ glob('**/*.js', { stat: true }, (err, files) => {
 });
 ```
 
-<br/>
+<br/><br/>
 
 **`sync`** <br/>
 : 동기식 사용
@@ -397,7 +397,7 @@ const files = glob.sync('**/*.txt');
 console.log('동기식으로 검색된 파일들:', files);
 ```
 
-<br/>
+<br/><br/>
 
 **옵션 조합 사용**
 ```jsx
@@ -412,7 +412,7 @@ glob('**/*.txt', {
 });
 ```
 
-<br/><br/>
+<br/><br/><br/>
 
 ### **✨ `fs` 모듈 vs `glob` 모듈**
 
@@ -463,7 +463,7 @@ fs.copy('source.txt', 'destination.txt')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.ensureDir(path)`** <br/>
 : 지정된 경로에 디렉터리가 존재하는지 확인하고, 없으면 디렉터리를 생성한다.
@@ -476,7 +476,7 @@ fs.ensureDir('./newDir')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.remove(path)`** <br/>
 : 지정된 파일이나 디렉터리를 삭제한다.
@@ -489,7 +489,7 @@ fs.remove('./oldDir')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.move(src, dest)`** <br/>
 : 파일이나 디렉터리를 이동한다.
@@ -503,7 +503,7 @@ fs.move('oldDir', 'newDir')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.outputFile(path, data)`** <br/>
 : 지정된 경로에 파일을 생성하고 데이터를 작성한다. (파일이 이미 있으면 덮어쓴다.)
@@ -517,7 +517,7 @@ fs.outputFile('newFile.txt', 'Hello, world!')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.outputJson(path, object)`** <br/>
 : 지정된 경로에 JSON 데이터를 작성한다.
@@ -533,7 +533,7 @@ fs.outputJson('data.json', data)
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.readJson(path)`** <br/>
 : 지정된 경로에서 JSON 파일을 읽어 객체로 반환한다.
@@ -546,7 +546,7 @@ fs.readJson('data.json')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.ensureFile(path)`** <br/>
 : 지정된 경로에 파일이 있는지 확인하고, 없으면 새 파일을 생성한다.
@@ -559,7 +559,7 @@ fs.ensureFile('newFile.txt')
   .catch(err => console.error(err));
 ```
 
-<br/> 
+<br/><br/>
 
 **`fs.pathExists(path)`** <br/>
 : 지정된 경로가 존재하는지 여부를 확인한다.
@@ -572,7 +572,7 @@ fs.pathExists('someDir')
   .catch(err => console.error(err))
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.createFile(path)`** <br/>
 : 지정된 경로에 파일이 없으면 새 파일을 만들고, 있으면 아무 작업도 하지 않는다.
@@ -584,7 +584,7 @@ fs.createFile('newFile.txt')
   .catch(err => console.error(err));
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.copySync(src, dest)`** <br/>
 : 동기적으로 파일이나 디렉터리를 복사한다.
@@ -597,7 +597,7 @@ fs.copySync('source.txt', 'destination.txt');
 console.log('파일 복사 완료');
 ```
 
-<br/>
+<br/><br/>
 
 **`fs.removeSync(path)`** <br/>
 : 동기적으로 파일이나 디렉터리를 삭제한다.
